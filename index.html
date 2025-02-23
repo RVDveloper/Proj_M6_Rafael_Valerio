@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre España</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <button id="infoButton" class="info-button">ℹ Información</button>
+
+    <!-- Modal de información -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Información sobre las APIs utilizadas</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>API de Geolocalización del Navegador</h3>
+                    <p>Se utiliza para obtener la ubicación del usuario (latitud y longitud) de manera nativa en el navegador.</p>
+                </div>
+                <div class="card">
+                    <h3>API de Nominatim (OpenStreetMap)</h3>
+                    <p>Se utiliza para realizar geocodificación inversa y obtener la dirección exacta a partir de las coordenadas.</p>
+                </div>
+                <div class="card">
+                    <h3>API de Clima (Weather API)</h3>
+                    <p>Se utiliza para obtener el clima actual y la previsión del tiempo basado en la ubicación del usuario.</p>
+                </div>
+                <div class="card">
+                    <h3>WebSocket</h3>
+                    <p>Se utiliza para enviar y recibir mensajes en tiempo real entre los usuarios en la misma red local wifi, debe adaptarse segun la Ip del usuario que desplegara el servidor, desventaja es que no es posible desplegarla en la web de githubpages</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>Descubre España</h1>
+    <form id="formulario">
+        <label>Nombre completo: </label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        <label>Comunitat: </label>
+        <select name="ccaa" id="ccaa">
+            <option value="" disabled selected>Selecciona una opción</option>
+        </select><br><br>
+        <label>Província: </label>
+        <select name="provincia" id="provincia">
+            <option value="" disabled selected>Selecciona una opción</option>
+        </select><br><br>
+        <label>Població: </label>
+        <select name="poblacion" id="poblacion">
+            <option value="" disabled selected>Selecciona una opción</option>
+        </select><br><br>
+        <label>Mensaje Personalizado: </label>
+        <textarea id="mensaje" name="mensaje" required></textarea><br><br>
+        <input type="submit" value="ENVIAR" id="submit">
+        <button type="button" id="climateForecast">Previsión Climática</button>
+        <button type="button" id="getLocation">Prevision de tu Ubicación</button>
+    </form>
+
+    <div id="image-container"></div>
+
+    <div id="chat-container">
+        <h2>Chat de Descubre España</h2>
+        <div id="messages"></div>
+        <form id="messageForm">
+            <input type="text" id="messageInput" placeholder="Escribe un mensaje..." required>
+            <button id="sendButton" type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <h2>Previsión Climática:</h2>
+    <div id="clima-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
