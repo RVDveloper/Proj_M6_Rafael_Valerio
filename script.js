@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const options = {
             method: 'GET',
             headers: {
-                'x-rapidapi-key': 'e8868d5af6msh9c028f705d0bb2fp18150bjsn16101430214b',
+                'x-rapidapi-key': '1b41bbe0a6msh3133953603d1c81p17bdf5jsn2980d7e0d7fe',
                 'x-rapidapi-host': 'weather-api167.p.rapidapi.com',
                 'Accept': 'application/json'
             }
@@ -385,7 +385,7 @@ async function obtenerClimaActual(ciudad) {
     const options = {
         method: 'GET',
         headers: {
-            'x-rapidapi-key': 'e8868d5af6msh9c028f705d0bb2fp18150bjsn16101430214b',
+            'x-rapidapi-key': '1b41bbe0a6msh3133953603d1c81p17bdf5jsn2980d7e0d7fe',
             'x-rapidapi-host': 'weather-api167.p.rapidapi.com',
             Accept: 'application/json'
         }
